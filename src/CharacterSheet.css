@@ -8,11 +8,15 @@
 
 .accordion-header{
     border: black solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .accordion-header > *{
     margin: 0px;
     padding: 10px;
+    display: inline;
 }
 
 
@@ -28,4 +32,17 @@
 
 .accordion-content.active{
     max-height: 600px;
+}
+
+.StatBlock{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.StatBlock > *{
+    margin: 0px;
 }

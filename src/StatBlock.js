@@ -1,9 +1,12 @@
 import React from 'react'
+import './CharacterSheet.css'
 
 const StatBlock = ({str, dex, con, int, wis, cha}) => {
 
     const abilityModifier = (ability) => {
-        return Math.floor((ability-10)/2)
+        let mod = Math.floor((ability-10)/2)
+    
+        return mod > 0 ? `+${mod}` : `${mod}`
     }
 
     return(
