@@ -23,7 +23,8 @@ const CharacterSheet = ({index}) => {
         return(
 
             <div className = "monster-wrapper">
-                <div className = {`accordion-header ${isActive ? "active" : ""}`}>
+                <div className = {`accordion-header ${isActive ? "active" : ""}`}
+                    onClick = {() => {setActive(!isActive)}}>
                     <h1>{monster.name}</h1>
                 </div>
                 <div className = {`accordion-content ${isActive ? "active" : ""}`}>

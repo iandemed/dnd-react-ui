@@ -6,6 +6,26 @@
     color: black;
 }
 
+.accordion-header{
+    border: black solid 1px;
+}
+
+.accordion-header > *{
+    margin: 0px;
+    padding: 10px;
+}
+
+
+.accordion-content{
+    margin: 0px;
+    padding: 0px 10px;
+    background: white;
+
+    overflow: hidden;
+    max-height: 0px;
+    transition: max-height 0.2s ease-out;
+}
+
 .accordion-content.active{
-    color: red;
+    max-height: 600px;
 }

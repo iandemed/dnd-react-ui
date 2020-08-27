@@ -16,9 +16,6 @@ function App() {
     })
   }, [])
 
-
-  console.log(monsterNames)
-
   /* The page will begin trying to render before we have loaded in all of our monsters,
   therefore if we were to try and reference anything created in the useEffect field we would
   cause the program to craash since it would be undefined on the first render */
