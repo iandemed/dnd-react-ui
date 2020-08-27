@@ -16,6 +16,8 @@ function App() {
     })
   }, [])
 
+
+
   /* The page will begin trying to render before we have loaded in all of our monsters,
   therefore if we were to try and reference anything created in the useEffect field we would
   cause the program to craash since it would be undefined on the first render */
@@ -32,7 +34,11 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <CharacterSheet name={monsterNames[0].index}/>
+          {
+            monsterNames.map((monster) => {
+              return <CharacterSheet index={monster.index}/>
+            })
+          }
         </header>
       </div>
     );
