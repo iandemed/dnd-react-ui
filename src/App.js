@@ -10,13 +10,14 @@ function App() {
   useEffect(() => {
     fetch("https://www.dnd5eapi.co/api/monsters/")
     .then(res=> res.json())
-    .then(data => {
-      setMonsterName(data.results)
+    .then(monsterData => {
+      setMonsterName(monsterData.results)
       setIsLoaded(true)
     })
   }, [])
 
 
+  console.log(monsterNames)
 
   /* The page will begin trying to render before we have loaded in all of our monsters,
   therefore if we were to try and reference anything created in the useEffect field we would
@@ -25,8 +26,11 @@ function App() {
     return(
       <div className="App">
       <header className="App-header">
-        Loading...
+        <h1>5th Edition SRD Monster Character Sheets</h1>
       </header>
+
+      Loading...
+
     </div>
     )
   }
@@ -34,12 +38,16 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          {
-            monsterNames.map((monster) => {
-              return <CharacterSheet index={monster.index}/>
-            })
-          }
+          <h1>5th Edition SRD Monster Character Sheets</h1>
         </header>
+        <div className="container">
+          {
+              monsterNames.map((monster) => {
+                console.log(monster.index)
+                return <CharacterSheet index={monster.index}/>
+              })
+          }
+        </div>
       </div>
     );
   }

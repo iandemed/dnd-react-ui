@@ -1,0 +1,11 @@
+
+
+
+.monster-sheet{
+    width: 100%;
+    color: black;
+}
+
+.accordion-content.active{
+    color: red;
+}
