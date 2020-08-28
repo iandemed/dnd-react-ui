@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import './CharacterSheet.css'
 import StatBlock from './StatBlock.js'
-import LineItem from './LineItem.js'
+import Speed from './Speed.js'
+import ConditionImmunities from './ConditionImmunities'
 
 const CharacterSheet = ({index}) => {
 
@@ -31,7 +32,7 @@ const CharacterSheet = ({index}) => {
                     <h1>{`CR ${monster.challenge_rating}`}</h1>
                 </div>
                 <div className = {`accordion-content ${isActive ? "active" : ""}`}>
-                    <LineItem stat = "Speed" types = {Object.keys(monster.speed)} values = {Object.values(monster.speed)} />
+                    <Speed types = {Object.keys(monster.speed)} values = {Object.values(monster.speed)} />
                     <StatBlock 
                         str={monster.strength}
                         dex={monster.dexterity}
@@ -41,6 +42,7 @@ const CharacterSheet = ({index}) => {
                         cha={monster.charisma}
                     
                     />
+                    <ConditionImmunities conditions = {monster['condition_immunities']}/>
                 </div>
             </div>
 
