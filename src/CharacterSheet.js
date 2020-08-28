@@ -3,6 +3,8 @@ import './CharacterSheet.css'
 import StatBlock from './StatBlock.js'
 import Speed from './Speed.js'
 import ConditionImmunities from './ConditionImmunities'
+import DamageImmunities from './DamageImmunities'
+import Proficiencies from './Proficiencies'
 
 const CharacterSheet = ({index}) => {
 
@@ -42,6 +44,9 @@ const CharacterSheet = ({index}) => {
                         cha={monster.charisma}
                     
                     />
+                    <Proficiencies type = "Skill" proficiencies = {monster['proficiencies']}/>
+                    <Proficiencies type = "Saving Throw:"proficiencies = {monster['proficiencies']}/>
+                    <DamageImmunities damage = {monster['damage_immunities']}/>
                     <ConditionImmunities conditions = {monster['condition_immunities']}/>
                 </div>
             </div>
