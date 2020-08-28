@@ -4,8 +4,12 @@ import CharacterSheet from './CharacterSheet.js';
 
 function App() {
 
+  const postsPerPage = 10
+
   const [monsterNames, setMonsterName] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
+  const [loadedMonsters, setLoadedMonsters] = useState([])
+ 
 
   useEffect(() => {
     fetch("https://www.dnd5eapi.co/api/monsters/")
