@@ -40,7 +40,6 @@ function App() {
         <div className="container">
           {
               monsterNames.map((monster) => {
-                console.log(monster.index)
                 return <CharacterSheet index={monster.index}/>
               })
           }

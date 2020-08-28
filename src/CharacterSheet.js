@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react'
 import './CharacterSheet.css'
-import StatBlock from './StatBlock'
+import StatBlock from './StatBlock.js'
+import LineItem from './LineItem.js'
 
 const CharacterSheet = ({index}) => {
 
     const [monster, setMonster] = useState({})
     const [isActive, setActive] = useState(false)
     const [isLoaded, setLoaded] = useState(false)
-    const [monsterStats, setMonsterStats] = useState({})
 
     /* Add a useEffect hook with an empty dependency array to prevent infinite callbacks */
     useEffect(() => {
@@ -31,6 +31,7 @@ const CharacterSheet = ({index}) => {
                     <h1>{`CR ${monster.challenge_rating}`}</h1>
                 </div>
                 <div className = {`accordion-content ${isActive ? "active" : ""}`}>
+                    <LineItem stat = "Speed" types = {Object.keys(monster.speed)} values = {Object.values(monster.speed)} />
                     <StatBlock 
                         str={monster.strength}
                         dex={monster.dexterity}
