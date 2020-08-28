@@ -27,11 +27,19 @@
 
     overflow: hidden;
     max-height: 0px;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.4s ease-out;
 }
 
 .accordion-content.active{
-    max-height: 600px;
+    max-height: 1000px;
+}
+
+.accordion-content > div{
+    padding: 10px;
+}
+
+.accordion-content *{
+    font-size: 1.25rem;
 }
 
 .StatBlock{
@@ -49,4 +57,14 @@
 
 .maroon{
     color: #903749;
+    border-bottom-style: double;
+}
+
+.ability > * {
+    margin: 0px;
+}
+
+.typeline{
+    padding: 0px;
+    border-bottom-style: double;
 }

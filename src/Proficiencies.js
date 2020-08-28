@@ -29,7 +29,7 @@ const Proficiencies = ({type, proficiencies}) => {
     else {
         return(
 
-        <div className = {`maroon`}>
+        <div>
            <strong>{type}</strong> {prepareProficencies(type, proficiencies)}
         </div>
 

@@ -24,7 +24,7 @@ const Speed = ({types, values}) => {
 
     return(
 
-        <div className = {`maroon`}>
+        <div>
            <strong>Speed:</strong> {prepareSpeed(types, values)}
         </div>
 

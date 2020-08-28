@@ -11,7 +11,7 @@ const StatBlock = ({str, dex, con, int, wis, cha}) => {
 
     return(
 
-        <div className = "StatBlock">
+        <div className = "StatBlock maroon">
             <h2>STR</h2>
             <h2>DEX</h2>
             <h2>CON</h2>
