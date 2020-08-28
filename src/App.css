@@ -16,3 +16,43 @@
 .container{
   margin: 2.5% 5%;
 }
+
+.accordion-header{
+  border: black solid 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover{
+  background-color: #ececec;
+}
+
+.accordion-header > *{
+  margin: 0px;
+  padding: 10px;
+  display: inline;
+}
+
+
+.accordion-content{
+  margin: 0px;
+  padding: 0px 10px;
+  background: white;
+
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.4s ease-out;
+}
+
+.accordion-content.active{
+  max-height: 1000px;
+}
+
+.accordion-content > div{
+  padding: 10px;
+}
+
+.accordion-content *{
+  font-size: 1.25rem;
+}

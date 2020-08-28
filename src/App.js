@@ -1,15 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import './App.css';
-import CharacterSheet from './CharacterSheet.js';
+import MonsterAccordion from './MonsterAccordion.js';
 
 function App() {
 
-  const postsPerPage = 10
-
   const [monsterNames, setMonsterName] = useState([])
   const [isLoaded, setIsLoaded] = useState(false)
-  const [loadedMonsters, setLoadedMonsters] = useState([])
- 
+
 
   useEffect(() => {
     fetch("https://www.dnd5eapi.co/api/monsters/")
@@ -44,12 +41,17 @@ function App() {
         <div className="container">
           {
               monsterNames.map((monster) => {
-                return <CharacterSheet index={monster.index}/>
-              })
+                return(
+                  <MonsterAccordion name={monster.name} index={monster.index}/> 
+                )
+                })
           }
         </div>
       </div>
     );
   }
 }
+
+
+
 export default App;
