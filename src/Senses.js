@@ -1,39 +1,32 @@
 import React from 'react'
 import './CharacterSheet.css'
 
+const prepareSenses = (types, values) => {
 
-
-const Senses = ({types, values}) => {
-
-    function prepareSenses(types, values){
-
-        let monsterSenses = ""
-
-        for (let i = 0; i < types.length; i++){
-            if (types[i] === "passive_perception"){
-                monsterSenses += `passive Perception ${values[i]},`
-            } else{
-                monsterSenses += `${types[i]} ${values[i]}, `
-            }
-        }
-        
-        return monsterSenses.slice(0,-1)
-    
+  let monsterSenses = ""
+  for (let i = 0; i < types.length; i++){
+    if (types[i] === "passive_perception") {
+      monsterSenses += `passive Perception ${values[i]},`;
+    } else {
+      monsterSenses += `${types[i]} ${values[i]}, `;
     }
-
-    if (types.length === 0){
-        return(null)
-    }
-    else {
-        return(
-
-        <div className>
-           <strong>Senses:</strong> {prepareSenses(types, values)}
-        </div>
-
-        )
-    }
+  }
+  return monsterSenses.slice(0,-1);
 }
 
 
-export default Senses
+const Senses = ({types, values}) => {
+  if (types.length === 0){
+    return null;
+  }
+  else {
+    return(
+      <div>
+        <strong>Senses:</strong> {prepareSenses(types, values)}
+      </div>
+    );
+  }
+}
+
+
+export default Senses;
