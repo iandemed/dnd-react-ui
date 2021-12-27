@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import './App.css';
 import CharacterSheet from './CharacterSheet.js';
 
@@ -9,7 +9,7 @@ const prepareCharacterSheet = (isActive, index) => {
   } else{
     return null;
   }
-}
+};
 
 const MonsterAccorion = ({name, index}) => {
 
@@ -27,7 +27,7 @@ const MonsterAccorion = ({name, index}) => {
       </div>
     </div>
   );
-}
+};
 
 export default MonsterAccorion;
 

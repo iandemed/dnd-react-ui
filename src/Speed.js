@@ -1,5 +1,5 @@
-import React from 'react'
-import './CharacterSheet.css'
+import React from 'react';
+import './CharacterSheet.css';
 
 
 const prepareSpeed = (types, values) => {

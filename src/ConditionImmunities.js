@@ -1,11 +1,11 @@
-import React from 'react'
-import './CharacterSheet.css'
+import React from 'react';
+import './CharacterSheet.css';
 
 
 const prepareConditionImmunities = (conditions) => {
   let monsterImmunities = "";
   conditions.forEach((condition) =>{
-      monsterImmunities += `${condition.name}, `
+      monsterImmunities += `${condition.name}, `;
   });
   
   return monsterImmunities.slice(0,-2);

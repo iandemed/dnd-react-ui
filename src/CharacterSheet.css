@@ -1,35 +1,32 @@
 
-
-
 .monster-sheet{
-    width: 100%;
-    color: black;
+  width: 100%;
+  color: black;
 }
 
-
 .StatBlock{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 
-    justify-items: center;
-    align-items: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .StatBlock > *{
-    margin: 0px;
+  margin: 0px;
 }
 
 .maroon{
-    color: #903749;
-    border-bottom-style: double;
+  color: #903749;
+  border-bottom-style: double;
 }
 
 .ability > * {
-    margin: 0px;
+  margin: 0px;
 }
 
 .typeline{
-    padding: 0px;
-    border-bottom-style: double;
+  padding: 0px;
+  border-bottom-style: double;
 }

@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react'
-import './CharacterSheet.css'
-import StatBlock from './StatBlock.js'
-import Speed from './Speed.js'
-import ConditionImmunities from './ConditionImmunities'
-import DamageImmunities from './DamageImmunities'
-import Proficiencies from './Proficiencies'
-import Senses from './Senses'
-import SpecialAbilities from "./SpecialAbilities"
+import React, {useState, useEffect} from 'react';
+import './CharacterSheet.css';
+import StatBlock from './StatBlock.js';
+import Speed from './Speed.js';
+import ConditionImmunities from './ConditionImmunities';
+import DamageImmunities from './DamageImmunities';
+import Proficiencies from './Proficiencies';
+import Senses from './Senses';
+import SpecialAbilities from "./SpecialAbilities";
 
 const CharacterSheet = ({index}) => {
 
@@ -36,7 +36,10 @@ const CharacterSheet = ({index}) => {
         <div>
           <strong>Hit Points</strong> {monster["hit_points"]} ({monster["hit_dice"]})
         </div>
-        <Speed types = {Object.keys(monster.speed)} values = {Object.values(monster.speed)} />
+        <Speed
+          types = {Object.keys(monster.speed)}
+          values = {Object.values(monster.speed)}
+        />
       </div> 
       <StatBlock 
         str={monster.strength}

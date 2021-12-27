@@ -1,5 +1,5 @@
-import React from 'react'
-import './CharacterSheet.css'
+import React from 'react';
+import './CharacterSheet.css';
 
 const prepareSenses = (types, values) => {
 
@@ -12,7 +12,7 @@ const prepareSenses = (types, values) => {
     }
   }
   return monsterSenses.slice(0,-1);
-}
+};
 
 
 const Senses = ({types, values}) => {
@@ -26,7 +26,7 @@ const Senses = ({types, values}) => {
       </div>
     );
   }
-}
+};
 
 
 export default Senses;
